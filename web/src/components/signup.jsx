@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import axios from 'axios';
+import { GlobalContext } from '../context/Context';
 
 
 
 
 function Signup() {
+    let { state, dispatch } = useContext(GlobalContext);
 
     const [result, setResult] = useState("");
 

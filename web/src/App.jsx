@@ -40,7 +40,7 @@ function App() {
     const getProfile = async () => {
 
       try {
-        let response = await axios.get(`${baseUrl}/products`, {
+        let response = await axios.get(`${state.baseUrl}/products`, {
           withCredentials: true
         })
 
