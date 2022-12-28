@@ -13,7 +13,6 @@ import Signup from "./components/signup";
 
 
 function App() {
-  const baseUrl = 'http://localhost:5001/api/v1'
   let { state, dispatch } = useContext(GlobalContext);
 
   const [fullName, setFullName] = useState("");
@@ -22,7 +21,7 @@ function App() {
   const logoutHandler = async () => {
     
     try {
-      let response = await axios.post(`${baseUrl}/logout`, {
+      let response = await axios.post(`${state.baseUrl}/logout`, {
         withCredentials: true
       })
       console.log("response: ", response);

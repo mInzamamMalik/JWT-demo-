@@ -2,7 +2,6 @@ import { useState } from "react";
 import axios from 'axios';
 
 
-const baseUrl = 'http://localhost:5001/api/v1'
 
 
 function Signup() {
@@ -18,7 +17,7 @@ function Signup() {
         e.preventDefault();
 
         try {
-            let response = await axios.post(`${baseUrl}/signup`, {
+            let response = await axios.post(`${state.baseUrl}/signup`, {
                 firstName: name,
                 lastName: name,
                 email: email,
