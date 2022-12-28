@@ -13,7 +13,7 @@ import Signup from "./components/signup";
 
 
 function App() {
-  const baseUrl = 'http://localhost:5001'
+  const baseUrl = 'http://localhost:5001/api/v1'
   let { state, dispatch } = useContext(GlobalContext);
 
   const [fullName, setFullName] = useState("");
