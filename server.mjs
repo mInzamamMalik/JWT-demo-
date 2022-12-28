@@ -8,7 +8,6 @@ import cookieParser from 'cookie-parser';
 import authApis from './apis/auth.mjs';
 import productApis from './apis/product.mjs';
 
-
 const SECRET = process.env.SECRET || "topsecret";
 
 

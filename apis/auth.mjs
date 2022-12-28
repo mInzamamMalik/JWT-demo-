@@ -162,8 +162,8 @@ router.post('/logout', (req, res) => {
     //     secure: true
     // });
 
-    res.cookie('Token', 'token', {
-        maxAge: 86_400_000,
+    res.cookie('Token', '', {
+        maxAge: 1,
         httpOnly: true,
         sameSite: 'none',
         secure: true
