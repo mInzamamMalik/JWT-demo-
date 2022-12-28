@@ -38,14 +38,12 @@ function App() {
   useEffect(() => {
     
     const getProfile = async () => {
-
       try {
         let response = await axios.get(`${state.baseUrl}/products`, {
           withCredentials: true
         })
 
         console.log("response: ", response);
-
 
         dispatch({
           type: 'USER_LOGIN'
