@@ -19,9 +19,9 @@ function App() {
 
 
   const logoutHandler = async () => {
-    
+
     try {
-      let response = await axios.post(`${state.baseUrl}/logout`, {
+      let response = await axios.post(`${state.baseUrl}/logout`,{}, {
         withCredentials: true
       })
       console.log("response: ", response);
@@ -36,12 +36,20 @@ function App() {
   }
 
   useEffect(() => {
-    
+
     const getProfile = async () => {
       try {
-        let response = await axios.get(`${state.baseUrl}/products`, {
-          withCredentials: true
-        })
+        let response = await axios.get(
+          `${state.baseUrl}/profile`,
+          {
+            withCredentials: true,
+            headers: {
+              'Cache-Control': 'no-cache',
+              'Pragma': 'no-cache',
+              'Expires': '0',
+            }
+          });
+          
 
         console.log("response: ", response);
 
